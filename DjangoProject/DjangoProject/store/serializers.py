@@ -13,7 +13,7 @@ class UserRegistrationSerializer(serializers.ModelSerializer):
 
     def validate(self, data):
         if data['password'] != data['password_check']:
-            raise serializers.ValidationError({"password_check": "Password is incorrect"})
+            raise serializers.ValidationError({"password_check": "Паролі не співпадають"})
         return data
 
     def create(self, validated_data):
