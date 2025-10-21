@@ -2,6 +2,8 @@ import pytest
 from django.contrib.auth.models import User
 from rest_framework.test import APIClient
 from store.models import Author, Publisher, Book
+
+@pytest.fixture
 def api_client():
     return APIClient()
 
